@@ -13,6 +13,11 @@
 			padding: 0;
 		}
 
+		body {
+			background-color: #f9daf8;
+			width: 100%;
+		}
+
 		a {
 			text-decoration: none;
 			color: #000;
@@ -24,36 +29,99 @@
 
 		.fixed_box {
 			position: fixed;
-			bottom: 40px;
-			right: 30px;
+			bottom: 30px;
+			right: 80px;
 			width: 40px;
 		}
 
 		#top {
-			max-width: 1320px;
-			margin: 0 auto;
+			max-width: 60%;
+			width: 60%;
+			/* margin: 0 auto; */
 		}
 
 		#top img {
 			width: 100%;
 			display: block;
 		}
+
+		.bi_body {
+			position: relative;
+			width: 100%;
+			display: flex;
+			align-items: flex-start;
+
+		}
+
+		.tero_img {
+			width: 20%;
+			position: sticky;
+			top: 520px;
+			left: 0;
+			display: block;
+			animation: ani 2s linear infinite alternate-reverse;
+			/* animation: ani 2s linear infinite alternate-reverse;
+			animation-delay: 0.5s; */
+		}
+
+		.tero_img img {
+			width: 100%;
+		}
+
+		.ate_img {
+			width: 20%;
+			position: sticky;
+			top: 500px;
+			left: 0px;
+			display: block;
+			animation: ani 2s linear infinite alternate-reverse;
+		}
+
+		.ate_img img {
+			width: 100%;
+		}
+
+		@keyframes ani {
+			0% {
+				transform: translateY(0px);
+			}
+
+			50% {
+				transform: translateY(20px);
+			}
+
+			90% {
+				transform: translateY(0px)
+			}
+
+			100% {
+				transform: translateY(0px);
+			}
+		}
 	</style>
 </head>
 
 <body>
-	<div id="top">
-		<img src="./images/1.jpg" class="guide1">
-		<img src="./images/2.jpg" class="guide1">
-		<img src="./images/3.jpg" class="guide1">
-		<img src="./images/4.jpg" class="guide1">
-		<img src="./images/5.jpg" class="guide1">
-		<img src="./images/6.jpg" class="guide1">
-		<img src="./images/7.jpg" class="guide1">
-		<img src="./images/8.jpg" class="guide1">
-		<img src="./images/9.jpg" class="guide1">
-		<img src="./images/10.jpg" class="guide1">
-	</div>
+	<div class="bi_body">
+		<div class="tero_img">
+			<img src="./images/tero_move.gif" alt="">
+		</div>
+		<div id="top">
+			<img src="./images/1.jpg" class="guide1">
+			<img src="./images/2.jpg" class="guide1">
+			<img src="./images/3.jpg" class="guide1">
+			<img src="./images/4.jpg" class="guide1">
+			<img src="./images/5.jpg" class="guide1">
+			<img src="./images/6.jpg" class="guide1">
+			<img src="./images/7.jpg" class="guide1">
+			<img src="./images/8.jpg" class="guide1">
+			<img src="./images/9.jpg" class="guide1">
+			<img src="./images/10.jpg" class="guide1">
+		</div><!--top-->
+		<div class="ate_img">
+			<img src="./images/ate_move.gif" alt="">
+		</div>
+	</div><!--bi_body-->
 	<div class="fixed_box">
 		<a href="#top" class="top_btn"><!--href부분은 이미지를 감싼 div에 있는 id이름과 동일하게 설정.-->
 			<img src="images/top.png" alt="top">
